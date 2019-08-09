@@ -7,7 +7,7 @@
   <div class="cocktail-cards">
     <% @cocktails.each do |c| %>
     <div class="cocktails">
-      <%= c.name %>
+      <%= link_to c.name, cocktail_path(c) %>
       <% end %>
     </div>
   </div>
