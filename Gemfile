@@ -6,7 +6,7 @@ ruby '2.6.3'
 # Gemfile
 # Dotenv for a file that will not be pushed on git
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'cloudinary', '~> 1.9.1'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'

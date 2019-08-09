@@ -1,14 +1,25 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%= image_path 'banner2-cocktail.jpg' %>)">
+  <div class="container">
+    <h1>Abs <strong>Cocktails</strong></h1>
+    <h3>Change your life and learn to make cocktails</h3>
+    <%= link_to "make you cocktail", new_cocktail_path, class: "btn-banner" %>
+  </div>
+</div>
+
 
 
 <div class="container">
-  <%= link_to 'Create new cocktail', new_cocktail_path  %>
-  <div class="cocktail-cards">
+  <div class="flex-box-cards">
     <% @cocktails.each do |c| %>
-    <div class="cocktails">
-      <%= link_to c.name, cocktail_path(c) %>
-      <% end %>
+    <div class="card-product">
+      <%= image_tag "cocktail-nav.jpg"%>
+      <div class="card-product-infos">
+        <%= link_to c.name, cocktail_path(c) %>
+
+      </div>
     </div>
+    <% end %>
   </div>
 </div>
+
+
